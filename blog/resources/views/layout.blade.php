@@ -27,18 +27,18 @@
 
                     <div class="collapse navbar-collapse">
                         <ul class="navbar-nav mr-auto">
-                            <li class="nav-item active">
-                                <a href="/" class="nav-link">Home</a>
-                                
+                            <li class="nav-item {{Request::routeIs('welcome.index') ? 'active' : ''}}">
+                                <a href="{{route('welcome.index') }}" class="nav-link">Home</a>
+                            
                             </li>
-                            <li class="nav-item">
-                                <a href="/blog" class="nav-link">Posts</a>
+                            <li class="nav-item {{Request::routeIs('blog.index') ? 'active' : ''}}">
+                                <a href="{{route('blog.index') }}" class="nav-link">Posts</a>
                             </li>
-                            <li class="nav-item">
-                                <a href="/about" class="nav-link">About Us</a>
+                            <li class="nav-item {{Request::routeIs('about') ? 'active' : ''}}">
+                                <a href="{{route('about') }}" class="nav-link">About Us</a>
                             </li>
-                            <li class="nav-item">
-                                <a href="/contact" class="nav-link">Contact</a>
+                            <li class="nav-item {{Request::routeIs('contact.index') ? 'active' : ''}}">
+                                <a href="{{route('contact.index') }}" class="nav-link">Contact</a>
                             </li>
                         </ul>
                     </div>

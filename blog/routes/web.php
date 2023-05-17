@@ -29,22 +29,22 @@ use Illuminate\Support\Facades\Route;
 //clean as all logic will be placed in the controller,
 
 //to welcome page
-Route::get('/', [WelcomeController::class, 'index']);
+Route::get('/', [WelcomeController::class, 'index'])->name('welcome.index');
 
 //to blog page
-Route::get('/blog', [BlogController::class, 'index']);
+Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
 
 //to single blog page
-Route::get('/blog/single-blog-post', [BlogController::class, 'show']);
+Route::get('/blog/single-blog-post', [BlogController::class, 'show'])->name('blog.show');
 
 //to about page
 //we use closure here cause the page will be a static page
 Route::get('/about', function(){
     return view('about');
-});
+})->name('about');
 
 //to contact page
-Route::get('/contact', [ContactController::class, 'index']);
+Route::get('/contact', [ContactController::class, 'index'])->name('contact.index');
 
 
 
