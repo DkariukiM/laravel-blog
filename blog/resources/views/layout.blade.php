@@ -81,6 +81,13 @@
 
 
 
+        <!-- section starts  -->
+        @yield('start-card')
+
+        <!-- main content  -->
+        @yield('main');
+
+
         <div class="instagram">
             <div class="container-xl">
                 <a href="#" class="btn btn-default btn-instagram">@BlogName on Instagram</a>
@@ -184,6 +191,7 @@
             <ul class="vertical-menu">
                 <li class="active">
                     <a href="/">Home</a>
+                  
                 </li>
                 <li><a href="/blog">Posts</a></li>
                 <li><a href="/about">About Us</a></li>
