@@ -1,6 +1,9 @@
 <?php
-
+use App\Http\Controllers\WelcomeController;
+use App\Http\Controllers\BlogController;
+use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +16,35 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+//route domain
+//www.nameofyourblog.com
+
+//using closures
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+//using controller
+//its advicable to use controllers, this will make your work
+//clean as all logic will be placed in the controller,
+
+//to welcome page
+Route::get('/', [WelcomeController::class, 'index']);
+
+//to blog page
+Route::get('/blog', [BlogController::class, 'index']);
+
+//to single blog page
+Route::get('/blog/single-blog-post', [BlogController::class, 'show']);
+
+//to about page
+//we use closure here cause the page will be a static page
+Route::get('/about', function(){
+    return view('about');
 });
+
+//to contact page
+Route::get('/contact', [ContactController::class, 'index']);
+
+
+

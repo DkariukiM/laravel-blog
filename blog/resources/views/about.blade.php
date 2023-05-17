@@ -81,220 +81,7 @@
 
 
 
-        <!-- section starts  -->
-        <section id="hero">
-            <div class="container-xl">
-                <div class="row gy-4">
-                    <div class="col-lg-8">
 
-                        <div class="post featured-post-lg">
-                            <div class="details clearfix">
-                                <a href="#" class="category-badge">Finance</a>
-                                <h2 class="post-title">
-                                    <a href="#">3 Things to avoid while investing in stock market as a beginner</a>
-                                </h2>
-                                <ul class="meta list-inline mb-0">
-                                    <li class="list-inline-item">
-                                        <a href="#">Techie Coder</a>
-                                    </li>
-                                    <li class="list-inline-item">30 May 2021</li>
-                                </ul>
-                            </div>
-                            <a href="#">
-                                <div class="thumb rounded">
-                                    <div class="inner data-bg-image" data-bg-image="images/posts/featured-lg.jpg">
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="post-tabs rounded bordered">
-                            <ul class="nav nav-tabs nav-pills nav-fill" id="postTab" role="tablist">
-                                <li class="nav-item" role="presentation">
-                                    <button aria-controls="popular" aria-selected="true" class="nav-link active"
-                                        data-bs-target="#popular" data-bs-toggle="tab" id="popular-tab" role="tab"
-                                        type="button">
-                                        Popular
-                                    </button>
-                                </li>
-                                <li class="nav-item" role="presentation">
-                                    <button aria-controls="recent" aria-selected="false" class="nav-link"
-                                        data-bs-target="#recent" data-bs-toggle="tab" id="recent-tab" role="tab"
-                                        type="button">
-                                        Recent
-                                    </button>
-                                </li>
-
-                            </ul>
-
-                            <!-- content  -->
-                            <div class="tab-content" id="postsTabContent">
-                                <!-- loader -->
-                                <div class="lds-dual-ring"></div>
-                                <!-- pop post  -->
-
-                                <div class="tab-pane fade show active" id="popular" aria-labelledby="popular-tab"
-                                    role="tabpanel">
-                                    <!-- post  -->
-                                    <div class="post post-list-sm circle">
-                                        <div class="thumb circle">
-                                            <a href="#">
-                                                <div class="inner">
-                                                    <img src="{{asset('images/posts/tabs-1.jpg') }}" alt="">
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="details clearfix">
-                                            <h6 class="post-title my-0">
-                                                <a href="#">Bitcoin price raise after sudden fall</a>
-                                            </h6>
-                                            <ul class="meta list-inline mt-1 mb-0">
-                                                <li class="list-inline-item">24 May 2021</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <!-- post2  -->
-                                    <div class="post post-list-sm circle">
-                                        <div class="thumb circle">
-                                            <a href="#">
-                                                <div class="inner">
-                                                    <img src="{{asset ('images/posts/tabs-2.jpg') }}" alt="">
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="details clearfix">
-                                            <h6 class="post-title my-0">
-                                                <a href="#">Clubhouse Crosses 1Mn Downloads On Play Store</a>
-                                            </h6>
-                                            <ul class="meta list-inline mt-1 mb-0">
-                                                <li class="list-inline-item">26 May 2021</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <!-- post3  -->
-                                    <div class="post post-list-sm circle">
-                                        <div class="thumb circle">
-                                            <a href="#">
-                                                <div class="inner">
-                                                    <img src="{{asset ('images/posts/tabs-3.jpg') }}" alt="">
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="details clearfix">
-                                            <h6 class="post-title my-0">
-                                                <a href="#">Check current Gold Price of 24k</a>
-                                            </h6>
-                                            <ul class="meta list-inline mt-1 mb-0">
-                                                <li class="list-inline-item">28 May 2021</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <!-- post4  -->
-                                    <div class="post post-list-sm circle">
-                                        <div class="thumb circle">
-                                            <a href="#">
-                                                <div class="inner">
-                                                    <img src="{{asset ('images/posts/tabs-4.png') }}" alt="">
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="details clearfix">
-                                            <h6 class="post-title my-0">
-                                                <a href="#">Improve your mails with Grammarly</a>
-                                            </h6>
-                                            <ul class="meta list-inline mt-1 mb-0">
-                                                <li class="list-inline-item">01 Jun 2021</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- recent  -->
-                                <div class="tab-pane fade" id="recent" aria-labelledby="recent-tab" role="tabpanel">
-                                    <!-- post  -->
-                                    <div class="post post-list-sm circle">
-                                        <div class="thumb circle">
-                                            <a href="#">
-                                                <div class="inner">
-                                                    <img src="{{asset ('images/posts/tabs-2.jpg') }}" alt="">
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="details clearfix">
-                                            <h6 class="post-title my-0">
-                                                <a href="#">Clubhouse breaking records of many apps</a>
-                                            </h6>
-                                            <ul class="meta list-inline mt-1 mb-0">
-                                                <li class="list-inline-item">24 May 2021</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <!-- post2  -->
-                                    <div class="post post-list-sm circle">
-                                        <div class="thumb circle">
-                                            <a href="#">
-                                                <div class="inner">
-                                                    <img src="{{asset ('images/posts/tabs-1.jpg') }}" alt="">
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="details clearfix">
-                                            <h6 class="post-title my-0">
-                                                <a href="#">At what age you should start investing</a>
-                                            </h6>
-                                            <ul class="meta list-inline mt-1 mb-0">
-                                                <li class="list-inline-item">26 May 2021</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <!-- post3  -->
-                                    <div class="post post-list-sm circle">
-                                        <div class="thumb circle">
-                                            <a href="#">
-                                                <div class="inner">
-                                                    <img src="{{asset ('images/posts/tabs-5.jpg') }}" alt="">
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="details clearfix">
-                                            <h6 class="post-title my-0">
-                                                <a href="#">Sonu sood foundation providing help in COVID-19</a>
-                                            </h6>
-                                            <ul class="meta list-inline mt-1 mb-0">
-                                                <li class="list-inline-item">28 Jun 2021</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <!-- post4  -->
-                                    <div class="post post-list-sm circle">
-                                        <div class="thumb circle">
-                                            <a href="#">
-                                                <div class="inner">
-                                                    <img src="{{asset ('images/posts/tabs-3.jpg') }}" alt="">
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="details clearfix">
-                                            <h6 class="post-title my-0">
-                                                <a href="#">Should we invest in soverign gold bonds</a>
-                                            </h6>
-                                            <ul class="meta list-inline mt-1 mb-0">
-                                                <li class="list-inline-item">04 Jun 2021</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                </div>
-            </div>
-        </section>
 
         <!-- main content  -->
 
@@ -304,6 +91,35 @@
 
                     <!-- left part 1st section  -->
                     <div class="col-lg-8">
+                        <div class="section-header">
+                            <h3 class="section-title">About Us</h3>
+                            <p class="excerpt mb-0">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mauris in aliquam sem fringilla ut morbi tincidunt. Ipsum dolor sit amet consectetur adipiscing elit duis tristique sollicitudin. Integer vitae justo eget magna fermentum iaculis eu non diam. Vel facilisis volutpat est velit egestas dui id ornare arcu. Sapien et ligula ullamcorper malesuada proin libero. Eget duis at tellus at. Pulvinar elementum integer enim neque. Non odio euismod lacinia at quis risus sed. Nunc eget lorem dolor sed viverra ipsum nunc aliquet.
+                            </p>
+
+                            <p class="excerpt mb-0">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mauris in aliquam sem fringilla ut morbi tincidunt. Ipsum dolor sit amet consectetur adipiscing elit duis tristique sollicitudin. Integer vitae justo eget magna fermentum iaculis eu non diam. Vel facilisis volutpat est velit egestas dui id ornare arcu. Sapien et ligula ullamcorper malesuada proin libero. Eget duis at tellus at. Pulvinar elementum integer enim neque. Non odio euismod lacinia at quis risus sed. Nunc eget lorem dolor sed viverra ipsum nunc aliquet.
+                            </p>
+
+                            <p class="excerpt mb-0">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mauris in aliquam sem fringilla ut morbi tincidunt. Ipsum dolor sit amet consectetur adipiscing elit duis tristique sollicitudin. Integer vitae justo eget magna fermentum iaculis eu non diam. Vel facilisis volutpat est velit egestas dui id ornare arcu. Sapien et ligula ullamcorper malesuada proin libero. Eget duis at tellus at. Pulvinar elementum integer enim neque. Non odio euismod lacinia at quis risus sed. Nunc eget lorem dolor sed viverra ipsum nunc aliquet.
+                            </p>
+
+                            <p class="excerpt mb-0">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mauris in aliquam sem fringilla ut morbi tincidunt. Ipsum dolor sit amet consectetur adipiscing elit duis tristique sollicitudin. Integer vitae justo eget magna fermentum iaculis eu non diam. Vel facilisis volutpat est velit egestas dui id ornare arcu. Sapien et ligula ullamcorper malesuada proin libero. Eget duis at tellus at. Pulvinar elementum integer enim neque. Non odio euismod lacinia at quis risus sed. Nunc eget lorem dolor sed viverra ipsum nunc aliquet.
+                            </p>
+
+                            <p class="excerpt mb-0">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mauris in aliquam sem fringilla ut morbi tincidunt. Ipsum dolor sit amet consectetur adipiscing elit duis tristique sollicitudin. Integer vitae justo eget magna fermentum iaculis eu non diam. Vel facilisis volutpat est velit egestas dui id ornare arcu. Sapien et ligula ullamcorper malesuada proin libero. Eget duis at tellus at. Pulvinar elementum integer enim neque. Non odio euismod lacinia at quis risus sed. Nunc eget lorem dolor sed viverra ipsum nunc aliquet.
+                            </p>
+
+                            <p class="excerpt mb-0">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mauris in aliquam sem fringilla ut morbi tincidunt. Ipsum dolor sit amet consectetur adipiscing elit duis tristique sollicitudin. Integer vitae justo eget magna fermentum iaculis eu non diam. Vel facilisis volutpat est velit egestas dui id ornare arcu. Sapien et ligula ullamcorper malesuada proin libero. Eget duis at tellus at. Pulvinar elementum integer enim neque. Non odio euismod lacinia at quis risus sed. Nunc eget lorem dolor sed viverra ipsum nunc aliquet.
+                            </p>
+                        </div>
+
+                        <div class="spacer" data-height="50"></div>
+
                         <div class="section-header">
                             <h3 class="section-title">Editor's Pick</h3>
                         </div>

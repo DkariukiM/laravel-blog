@@ -102,7 +102,7 @@
                             </div>
                             <a href="#">
                                 <div class="thumb rounded">
-                                    <div class="inner data-bg-image" data-bg-image="images/posts/featured-lg.jpg">
+                                    <div class="inner data-bg-image" data-bg-image="{{ asset('images/posts/featured-lg.jpg') }}">
                                     </div>
                                 </div>
                             </a>
@@ -154,6 +154,7 @@
                                             </ul>
                                         </div>
                                     </div>
+
                                     <!-- post2  -->
                                     <div class="post post-list-sm circle">
                                         <div class="thumb circle">
@@ -172,6 +173,7 @@
                                             </ul>
                                         </div>
                                     </div>
+
                                     <!-- post3  -->
                                     <div class="post post-list-sm circle">
                                         <div class="thumb circle">
@@ -305,356 +307,97 @@
                     <!-- left part 1st section  -->
                     <div class="col-lg-8">
                         <div class="section-header">
-                            <h3 class="section-title">Editor's Pick</h3>
-                        </div>
+                            <!-- <h3 class="section-title">Editor's Pick</h3> -->
+                            <p class="excerpt mb-0">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquet enim tortor at auctor urna nunc id cursus metus. Lectus arcu bibendum at varius vel pharetra vel turpis nunc. Quam quisque id diam vel quam elementum. Enim neque volutpat ac tincidunt vitae semper quis lectus nulla. Rutrum tellus pellentesque eu tincidunt tortor. Non diam phasellus vestibulum lorem sed risus. Ut pharetra sit amet aliquam. Faucibus in ornare quam viverra orci sagittis eu volutpat odio. Nibh tellus molestie nunc non blandit. Elit scelerisque mauris pellentesque pulvinar pellentesque habitant. Volutpat consequat mauris nunc congue nisi vitae. Viverra ipsum nunc aliquet bibendum enim facilisis gravida neque. Est lorem ipsum dolor sit amet. Et malesuada fames ac turpis egestas integer. Erat nam at lectus urna duis convallis convallis tellus. Pellentesque diam volutpat commodo sed egestas egestas. Ultricies integer quis auctor elit. Ac felis donec et odio pellentesque diam.
 
-                        <div class="padding-30 rounded bordered">
-                            <div class="row gy-5">
-                                <div class="col-sm-6">
-                                    <!-- post  -->
-                                    <div class="post">
-                                        <div class="thumb rounded">
-                                            <a href="#" class="category-badge position-absolute">Lifestyle</a>
-                                            <span class="post-format">
-                                                <i class="icon-picture"></i>
-                                            </span>
-                                            <a href="#">
-                                                <div class="inner">
-                                                    <img src="{{asset ('images/posts/editors-lg.jpg') }}" alt="">
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <ul class="meta list-inline mt-4 mb-0">
-                                            <li class="list-inline-item">
-                                                <a href="#">
-                                                    <img class="author" src="{{asset ('images/other/author-sm.jpg') }}" alt="">
-                                                    Techie Coder
-                                                </a>
-                                            </li>
-                                            <li class="list-inline-item">05 Jun 2021</li>
-                                        </ul>
-                                        <h5 class="post-title mb-3 mt-3">
-                                            <a href="#">3 must visit Place in switzerland</a>
-                                        </h5>
-                                        <p class="excerpt mb-0">
-                                            This is Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo,
-                                            quasi.
+                            Volutpat lacus laoreet non curabitur gravida arcu. Arcu vitae elementum curabitur vitae nunc sed velit dignissim sodales. Lectus nulla at volutpat diam ut venenatis. Vivamus arcu felis bibendum ut tristique et. Purus semper eget duis at tellus at urna. Est lorem ipsum dolor sit amet. Posuere urna nec tincidunt praesent semper. Ut porttitor leo a diam sollicitudin tempor id eu nisl. Nulla facilisi morbi tempus iaculis urna id volutpat lacus laoreet. Nisl vel pretium lectus quam id leo in. Arcu cursus euismod quis viverra nibh cras pulvinar mattis. Id semper risus in hendrerit gravida rutrum quisque non tellus. Donec massa sapien faucibus et molestie ac feugiat sed lectus.
 
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="post post-list-sm square">
-                                        <div class="thumb rounded">
-                                            <a href="#">
-                                                <div class="inner">
-                                                    <img src="{{asset ('images/posts/editor-side-1.jpg') }}" alt="">
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="details clearfix">
-                                            <h6 class="post-title my-0">
-                                                <a href="#">
-                                                    2 Policemen saved life like a hero
-                                                </a>
-                                            </h6>
-                                            <ul class="meta list-inline mt-1 mb-0">
-                                                <li class="list-inline-item">25 May 2021</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="post post-list-sm square">
-                                        <div class="thumb rounded">
-                                            <a href="#">
-                                                <div class="inner">
-                                                    <img src="{{asset ('images/posts/editor-side-2.jpg') }}" alt="">
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="details clearfix">
-                                            <h6 class="post-title my-0">
-                                                <a href="#">
-                                                    3 ways to remove dark spots naturally
-                                                </a>
-                                            </h6>
-                                            <ul class="meta list-inline mt-1 mb-0">
-                                                <li class="list-inline-item">25 May 2021</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="post post-list-sm square">
-                                        <div class="thumb rounded">
-                                            <a href="#">
-                                                <div class="inner">
-                                                    <img src="{{asset ('images/posts/editor-side-3.jpg') }}" alt="">
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="details clearfix">
-                                            <h6 class="post-title my-0">
-                                                <a href="#">
-                                                    Top 10 Interior designers for your dream home.
-                                                </a>
-                                            </h6>
-                                            <ul class="meta list-inline mt-1 mb-0">
-                                                <li class="list-inline-item">28 May 2021</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="post post-list-sm square">
-                                        <div class="thumb rounded">
-                                            <a href="#">
-                                                <div class="inner">
-                                                    <img src="{{asset ('images/posts/editor-side-4.jpg') }}" alt="">
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="details clearfix">
-                                            <h6 class="post-title my-0">
-                                                <a href="#">
-                                                    Learn how to make desert at home.
-                                                </a>
-                                            </h6>
-                                            <ul class="meta list-inline mt-1 mb-0">
-                                                <li class="list-inline-item">28 May 2021</li>
-                                            </ul>
-                                        </div>
-                                    </div>
+                            Accumsan tortor posuere ac ut consequat semper. Vivamus arcu felis bibendum ut tristique et egestas. Tristique sollicitudin nibh sit amet commodo. Est pellentesque elit ullamcorper dignissim cras tincidunt lobortis. Facilisi nullam vehicula ipsum a. Vestibulum morbi blandit cursus risus at ultrices mi tempus imperdiet. Elit sed vulputate mi sit. Ultrices vitae auctor eu augue ut lectus arcu. Dui id ornare arcu odio. Vulputate sapien nec sagittis aliquam. Cursus turpis massa tincidunt dui. Mattis aliquam faucibus purus in massa tempor nec feugiat. Praesent elementum facilisis leo vel.
 
-                                </div>
+                            Nulla posuere sollicitudin aliquam ultrices sagittis orci a scelerisque purus. Porta nibh venenatis cras sed felis eget velit aliquet. Ipsum faucibus vitae aliquet nec. Netus et malesuada fames ac turpis egestas maecenas pharetra convallis. Ipsum nunc aliquet bibendum enim facilisis gravida neque convallis a. Et malesuada fames ac turpis egestas. Tortor posuere ac ut consequat semper viverra nam libero. Lorem ipsum dolor sit amet. Vel pharetra vel turpis nunc eget lorem dolor sed viverra. Dignissim cras tincidunt lobortis feugiat. Montes nascetur ridiculus mus mauris vitae ultricies leo integer malesuada. Blandit aliquam etiam erat velit scelerisque. Sed odio morbi quis commodo odio aenean. Et malesuada fames ac turpis. Nec ullamcorper sit amet risus nullam eget felis eget.
 
-                            </div>
+                            Ipsum dolor sit amet consectetur adipiscing elit. Porttitor leo a diam sollicitudin. Arcu dictum varius duis at consectetur lorem donec massa. Purus in mollis nunc sed id semper. Aliquam malesuada bibendum arcu vitae elementum curabitur. Malesuada bibendum arcu vitae elementum. Felis donec et odio pellentesque diam volutpat commodo sed egestas. Vitae elementum curabitur vitae nunc. Consequat nisl vel pretium lectus quam id leo in vitae. Sed sed risus pretium quam vulputate dignissim. A cras semper auctor neque. Enim facilisis gravida neque convallis. Adipiscing bibendum est ultricies integer quis auctor.
+
+                            </p>
                         </div>
 
                         <div class="spacer" data-height="50"></div>
 
+                        <!-- comment section -->
                         <div class="section-header">
-                            <h3 class="section-title">Trending</h3>
+                            <h3 class="section-title">Comments</h3>
                         </div>
 
                         <div class="padding-30 rounded bordered">
                             <div class="row gy-5">
-                                <div class="col-sm-6">
-                                    <div class="post">
-                                        <div class="thumb rounded">
-                                            <a href="#" class="category-badge position-absolute">Business</a>
-                                            <span class="post-format">
-                                                <i class="icon-picture"></i>
-                                            </span>
+                                    <!-- comment -->
+                                    <div class="post post-list-sm circle">
+                                        <div class="thumb circle">
                                             <a href="#">
                                                 <div class="inner">
-                                                    <img src="{{asset ('images/posts/tren-lg-1.jpg') }}" alt="">
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <ul class="meta list-inline mt-4 mb-0">
-                                            <li class="list-inline-item">
-                                                <a href="#">
-                                                    <img src="{{asset ('images/other/author-sm.jpg') }}" class="author" alt="">
-                                                    Techie Coder
-                                                </a>
-                                            </li>
-                                            <li class="list-inline-item">24 May 2021</li>
-                                        </ul>
-                                        <h5 class="post-title mb-3 mt-3">
-                                            <a href="#">Bitcoin investors lost $14.2bn in recent cypto crash</a>
-                                        </h5>
-                                        <p class="excerpt mb-0">
-                                            This is Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus,
-                                            id.
-                                        </p>
-                                    </div>
-
-                                    <div class="post post-list-sm square before-seperator">
-                                        <div class="thumb rounded">
-                                            <a href="#">
-                                                <div class="inner">
-                                                    <img src="{{asset ('images/posts/tren-sm-1.jpg') }}" alt="">
+                                                    <img src="{{asset ('images/posts/tabs-2.jpg') }}" alt="">
                                                 </div>
                                             </a>
                                         </div>
                                         <div class="details clearfix">
-                                            <h6 class="post-title my-0">
-                                                <a href="#">IPL 2021 to resume in sept 3rd week in UAE</a>
+                                            <h3 class="post-title my-0">
+                                                User
+                                            </h3>
+
+                                            <h6 class="meta list-inline mt-1 mb-0">
+                                                Message.
                                             </h6>
                                             <ul class="meta list-inline mt-1 mb-0">
-                                                <li class="list-inline-item">25 May 2021</li>
+                                                <li class="list-inline-item">26 May 2021</li>
                                             </ul>
                                         </div>
                                     </div>
-                                    <div class="post post-list-sm square before-seperator">
-                                        <div class="thumb rounded">
-                                            <a href="#">
-                                                <div class="inner">
-                                                    <img src="{{asset ('images/posts/tren-sm-2.jpg') }}" alt="">
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="details clearfix">
-                                            <h6 class="post-title my-0">
-                                                <a href="#">HDFC Bank concerned over retail asset quality in
-                                                    near-term</a>
-                                            </h6>
-                                            <ul class="meta list-inline mt-1 mb-0">
-                                                <li class="list-inline-item">25 May 2021</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-
-
-
-                                </div>
-
-                                <div class="col-sm-6">
-                                    <div class="post">
-                                        <div class="thumb rounded">
-                                            <a href="#" class="category-badge position-absolute">Inspiration</a>
-                                            <span class="post-format">
-                                                <i class="icon-earphones"></i>
-                                            </span>
-                                            <a href="#">
-                                                <div class="inner">
-                                                    <img src="{{asset ('images/posts/tren-lg-2.jpg') }}" alt="">
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <ul class="meta list-inline mt-4 mb-0">
-                                            <li class="list-inline-item">
-                                                <a href="#">
-                                                    <img src="{{asset ('images/other/author-sm.jpg') }}" class="author" alt="">
-                                                    Techie Coder
-                                                </a>
-                                            </li>
-                                            <li class="list-inline-item">29 May 2021</li>
-                                        </ul>
-                                        <h5 class="post-title mb-3 mt-3">
-                                            <a href="#">Spotify gives a discount for student</a>
-                                        </h5>
-                                        <p class="excerpt mb-0">
-                                            This is Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus,
-                                            id.
-                                        </p>
-                                    </div>
-
-                                    <div class="post post-list-sm square before-seperator">
-                                        <div class="thumb rounded">
-                                            <a href="#">
-                                                <div class="inner">
-                                                    <img src="{{asset ('images/posts/tren-sm-3.jpg') }}" alt="">
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="details clearfix">
-                                            <h6 class="post-title my-0">
-                                                <a href="#">Arogya ap to display vaccination status</a>
-                                            </h6>
-                                            <ul class="meta list-inline mt-1 mb-0">
-                                                <li class="list-inline-item">25 May 2021</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="post post-list-sm square before-seperator">
-                                        <div class="thumb rounded">
-                                            <a href="#">
-                                                <div class="inner">
-                                                    <img src="{{asset ('images/posts/tren-sm-4.jpg') }}" alt="">
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="details clearfix">
-                                            <h6 class="post-title my-0">
-                                                <a href="#">Petrol, diesel prices hiked again today.</a>
-                                            </h6>
-                                            <ul class="meta list-inline mt-1 mb-0">
-                                                <li class="list-inline-item">25 May 2021</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
+                        <!-- end of comment section -->
+
+                        <!-- begining of comment form -->
                         <div class="spacer" data-height="50"></div>
 
                         <div class="section-header">
-                            <h3 class="section-title">Inspiration</h3>
-                            <div class="slick-arrows-top">
-                                <buttton class="carousel-topNav-prev slick-custom-buttons" type="button"
-                                    data-role="none" aria-label="Previous">
-                                    <i class="icon-arrow-left"></i>
-                                </buttton>
-                                <buttton class="carousel-topNav-next slick-custom-buttons" type="button"
-                                    data-role="none" aria-label="Next">
-                                    <i class="icon-arrow-right"></i>
-                                </buttton>
-                            </div>
+                            <h3 class="section-title">Leave A Comment.</h3>
                         </div>
 
-                        <div class="row post-carousel-twoCol post-carousel">
-                            <div class="post post-over-content col-md-6">
-                                <div class="details clearfix">
-                                    <a href="#" class="category-badge">Entertainment</a>
-                                    <h4 class="post-title">
-                                        <a href="#">Amazon prime video to coproduce "Ram Setu"</a>
-                                    </h4>
-                                    <ul class="meta list-inline mb-0">
-                                        <li class="list-inline-item">
-                                            <a href="#">Techie Coder</a>
-                                        </li>
-                                        <li class="list-inline-item">03 Jun 2021</li>
-                                    </ul>
-                                </div>
-                                <a href="#">
-                                    <div class="thumb rounded">
-                                        <div class="inner">
-                                            <img src="{{asset ('images/posts/insp-1.jpg') }}" alt="">
+                        <div class="padding-30 rounded bordered">
+                            <div class="row gy-5">
+                                    <!-- comment form-->
+                                    <div class="widget-content">
+                                    <form action="#">
+                                        <div class="mb-2">
+                                            <input type="email" class="form-control w-100 "
+                                                placeholder="Name...">
                                         </div>
-                                    </div>
-                                </a>
-                            </div>
 
-                            <div class="post post-over-content col-md-6">
-                                <div class="details clearfix">
-                                    <a href="#" class="category-badge">Technology</a>
-                                    <h4 class="post-title">
-                                        <a href="#">How to prepare your Google account afterlife.</a>
-                                    </h4>
-                                    <ul class="meta list-inline mb-0">
-                                        <li class="list-inline-item">
-                                            <a href="#">Techie Coder</a>
-                                        </li>
-                                        <li class="list-inline-item">02 Jun 2021</li>
-                                    </ul>
-                                </div>
-                                <a href="#">
-                                    <div class="thumb rounded">
-                                        <div class="inner">
-                                            <img src="{{asset ('images/posts/insp-2.jpg') }}" alt="">
+                                        <div class="mb-2">
+                                            <input type="email" class="form-control w-100 "
+                                                placeholder="Email address...">
                                         </div>
-                                    </div>
-                                </a>
-                            </div>
 
-                            <div class="post post-over-content col-md-6">
-                                <div class="details clearfix">
-                                    <a href="#" class="category-badge">Education</a>
-                                    <h4 class="post-title">
-                                        <a href="#">Learn from top B-Schools at 1/10th the fee: upGrad</a>
-                                    </h4>
-                                    <ul class="meta list-inline mb-0">
-                                        <li class="list-inline-item">
-                                            <a href="#">Techie Coder</a>
-                                        </li>
-                                        <li class="list-inline-item">01 Jun 2021</li>
-                                    </ul>
-                                </div>
-                                <a href="#">
-                                    <div class="thumb rounded">
-                                        <div class="inner">
-                                            <img src="{{asset ('images/posts/insp-3.jpg') }}" alt="">
+                                        <div class="mb-2">
+                                            <textarea class="form-control w-100 text-center"
+                                                > </textarea>
                                         </div>
-                                    </div>
-                                </a>
+
+                        
+
+
+                                        <button class="btn btn-default btn-full" type="submit"> Comment</button>
+
+                                    </form>
+                                    <span class="newsletter-privacy text-center mt-3">
+                                        By commenting, you agree to our <a href="#">Privacy policy</a>
+                                    </span>
+                                </div>
+
+                                    <!-- end of comment form -->
+
+
                             </div>
                         </div>
 
@@ -992,6 +735,8 @@
                                             </ul>
                                         </div>
                                     </div>
+
+
                                     <div class="post post-list-sm circle">
                                         <div class="thumb circle">
                                             <span class="number">2</span>
