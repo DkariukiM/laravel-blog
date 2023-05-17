@@ -1,9 +1,10 @@
 <?php
-use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\WelcomeController;
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-
 
 /*
 |--------------------------------------------------------------------------
@@ -16,35 +17,38 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//route domain
-//www.nameofyourblog.com
+// www.nameofyoursite.com/
 
-//using closures
+// Using closure
 // Route::get('/', function () {
 //     return view('welcome');
 // });
 
-//using controller
-//its advicable to use controllers, this will make your work
-//clean as all logic will be placed in the controller,
+// Using controller
 
-//to welcome page
+// To welcome page
 Route::get('/', [WelcomeController::class, 'index'])->name('welcome.index');
 
-//to blog page
+// To blog page
 Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
 
-//to single blog page
-Route::get('/blog/single-blog-post', [BlogController::class, 'show'])->name('blog.show');
-
-//to about page
-//we use closure here cause the page will be a static page
+// To about page
 Route::get('/about', function(){
     return view('about');
 })->name('about');
 
-//to contact page
+// To contact page
 Route::get('/contact', [ContactController::class, 'index'])->name('contact.index');
 
 
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
 
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
+
+require __DIR__.'/auth.php';
