@@ -40,6 +40,12 @@
                             <li class="nav-item {{Request::routeIs('contact.index') ? 'active' : ''}}">
                                 <a href="{{route('contact.index') }}" class="nav-link">Contact</a>
                             </li>
+                            <li class="nav-item {{Request::routeIs('login') ? 'active' : ''}}">
+                                <a href="{{route('login') }}" class="nav-link"> Login </a>
+                            </li>
+                            <li class="nav-item {{Request::routeIs('register') ? 'active' : ''}}">
+                                <a href="{{route('register') }}" class="nav-link"> Register </a>
+                            </li>
                         </ul>
                     </div>
 
@@ -87,8 +93,8 @@
         <!-- main content  -->
         @yield('main');
 
-
-        <div class="instagram">
+        <!-- instagram content -->
+        <!-- <div class="instagram">
             <div class="container-xl">
                 <a href="#" class="btn btn-default btn-instagram">@BlogName on Instagram</a>
                 <div class="instagram-feed d-flex flex-wrap">
@@ -124,7 +130,8 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
+        @yield('instagram-content')
 
         <footer>
             <div class="container-xl">
@@ -189,13 +196,24 @@
         </div>
         <nav>
             <ul class="vertical-menu">
-                <li class="active">
-                    <a href="/">Home</a>
-                  
+                <li class="{{Request::routeIs('welcome.index') ? 'active' : ''}}">
+                    <a href="{{route('welcome.index') }}">Home</a>                            
                 </li>
-                <li><a href="/blog">Posts</a></li>
-                <li><a href="/about">About Us</a></li>
-                <li><a href="/contact">Contact</a></li>
+                <li class="{{Request::routeIs('blog.index') ? 'active' : ''}}">
+                    <a href="{{route('blog.index') }}">Posts</a>
+                </li>
+                <li class="{{Request::routeIs('about') ? 'active' : ''}}">
+                    <a href="{{route('about') }}">About Us</a>
+                </li>
+                <li class="{{Request::routeIs('contact.index') ? 'active' : ''}}">
+                    <a href="{{route('contact.index') }}">Contact</a>
+                </li>
+                <li class="{{Request::routeIs('login') ? 'active' : ''}}">
+                    <a href="{{route('login') }}" > Login </a>
+                </li>
+                <li class="{{Request::routeIs('register') ? 'active' : ''}}">
+                    <a href="{{route('register') }}"> Register </a>
+                </li>
             </ul>
         </nav>
 
