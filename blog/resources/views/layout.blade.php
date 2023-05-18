@@ -208,12 +208,14 @@
                 <li class="{{Request::routeIs('contact.index') ? 'active' : ''}}">
                     <a href="{{route('contact.index') }}">Contact</a>
                 </li>
+                @guest
                 <li class="{{Request::routeIs('login') ? 'active' : ''}}">
                     <a href="{{route('login') }}" > Login </a>
                 </li>
                 <li class="{{Request::routeIs('register') ? 'active' : ''}}">
                     <a href="{{route('register') }}"> Register </a>
                 </li>
+                @endguest
             </ul>
         </nav>
 
