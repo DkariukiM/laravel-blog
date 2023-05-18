@@ -40,12 +40,22 @@
                             <li class="nav-item {{Request::routeIs('contact.index') ? 'active' : ''}}">
                                 <a href="{{route('contact.index') }}" class="nav-link">Contact</a>
                             </li>
+                            @guest
                             <li class="nav-item {{Request::routeIs('login') ? 'active' : ''}}">
                                 <a href="{{route('login') }}" class="nav-link"> Login </a>
                             </li>
                             <li class="nav-item {{Request::routeIs('register') ? 'active' : ''}}">
                                 <a href="{{route('register') }}" class="nav-link"> Register </a>
                             </li>
+                            @endguest
+
+                            @auth
+                            <li class="nav-item {{Request::routeIs('dashboard') ? 'active' : ''}}">
+                                <a href="{{route('dashboard') }}" class="nav-link"> Dashboard </a>
+                            </li>
+                            @endauth
+
+
                         </ul>
                     </div>
 

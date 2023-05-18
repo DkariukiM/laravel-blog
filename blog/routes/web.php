@@ -32,6 +32,9 @@ Route::get('/', [WelcomeController::class, 'index'])->name('welcome.index');
 // To blog page
 Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
 
+//to single blog page
+Route::get('/single', [BlogController::class, 'show']);
+
 // To about page
 Route::get('/about', function(){
     return view('about');
