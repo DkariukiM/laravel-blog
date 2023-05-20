@@ -35,6 +35,16 @@ Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
 //to single blog page
 Route::get('/single', [BlogController::class, 'show']);
 
+//to view your blog posts
+Route::get('/blog/posts', [BlogController::class, 'posts'])->name('posts.show');
+
+//to create a blog posts
+Route::get('/blog/create', [BlogController::class, 'create'])->name('blog.create');
+
+//to store a blog posts to DB
+Route::post('/blog', [BlogController::class, 'store'])->name('blog.store');
+
+
 // To about page
 Route::get('/about', function(){
     return view('about');
