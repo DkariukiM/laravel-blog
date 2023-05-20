@@ -29,9 +29,15 @@ class BlogController extends Controller
 
     //ceate your post
     public function store(Request $request){
-        $allInputs = $request->all();
+        // $allInputs = $request->all();
 
-        dd($allInputs);
+        // dd($allInputs);
+        $request->validate([
+        'title' => 'required'
+
+        ]);
+
+        dd('validation passed, you can now request the input');
 
 
     }
