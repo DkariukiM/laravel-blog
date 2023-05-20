@@ -22,6 +22,7 @@
                   </div>
                   <form class="form theme-form" method="post" action="{{route('blog.store')}}" encytype="multipart/form-data">
                     @csrf
+                    
                     <div class="card-body">
                       <div class="row">
                         <div class="col">
@@ -29,6 +30,9 @@
                             <label class="form-label" for="exampleFormControlInput1">Title</label>
                             <input class="form-control input-air-primary" id="exampleFormControlInput1" name="title" type="text" placeholder="input your title here....">
                           </div>
+                          @error('title')
+                          <p style="color: red; margin-bottom:25px ">{{$message}}</p>
+                          @enderror
                         </div>
                       </div>
                       
@@ -38,6 +42,9 @@
                             <label class="form-label" for="exampleInputPassword2">Image</label>
                             <input class="form-control input-air-primary" name="image" id="exampleInputPassword2" type="file" >
                           </div>
+                          @error('image')
+                          <p style="color: red; margin-bottom:25px ">{{$message}}</p>
+                          @enderror
                         </div>
                       </div>
 
@@ -48,6 +55,9 @@
                             <label class="form-label" for="exampleFormControlTextarea4"> Body </label>
                             <textarea class="form-control input-air-primary" name="body" id="exampleFormControlTextarea4" rows="6"></textarea>
                           </div>
+                          @error('body')
+                          <p style="color: red; margin-bottom:25px ">{{$message}}</p>
+                          @enderror
                         </div>
                       </div>
                     </div>

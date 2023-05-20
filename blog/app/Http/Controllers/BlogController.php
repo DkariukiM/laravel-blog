@@ -33,7 +33,9 @@ class BlogController extends Controller
 
         // dd($allInputs);
         $request->validate([
-        'title' => 'required'
+        'title' => 'required',
+        'image' => 'required',
+        'body' => 'required'
 
         ]);
 
