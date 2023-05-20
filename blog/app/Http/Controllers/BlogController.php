@@ -30,16 +30,15 @@ class BlogController extends Controller
     //ceate your post
     public function store(Request $request){
         // $allInputs = $request->all();
-
         // dd($allInputs);
         $request->validate([
         'title' => 'required',
-        'image' => 'required',
+        'image' => 'required | image',
         'body' => 'required'
 
         ]);
 
-        dd('validation passed, you can now request the input');
+        //dd('validation passed, you can now request the input');
 
 
     }
