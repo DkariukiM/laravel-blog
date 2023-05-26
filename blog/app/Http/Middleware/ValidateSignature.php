@@ -11,6 +11,7 @@ class ValidateSignature extends Middleware
      *
      * @var array<int, string>
      */
+    
     protected $except = [
         // 'fbclid',
         // 'utm_campaign',
@@ -18,5 +19,7 @@ class ValidateSignature extends Middleware
         // 'utm_medium',
         // 'utm_source',
         // 'utm_term',
+
+        
     ];
 }

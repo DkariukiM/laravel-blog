@@ -33,7 +33,7 @@ Route::get('/', [WelcomeController::class, 'index'])->name('welcome.index');
 Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
 
 //to single blog page
-Route::get('/single', [BlogController::class, 'show']);
+Route::get('/blog/{post:slug}', [BlogController::class, 'show'])->name('blog.show');
 
 //to view your blog posts
 Route::get('/blog/posts', [BlogController::class, 'posts'])->name('posts.show');
@@ -43,6 +43,9 @@ Route::get('/blog/create', [BlogController::class, 'create'])->name('blog.create
 
 //to store a blog posts to DB
 Route::post('/blog', [BlogController::class, 'store'])->name('blog.store');
+
+//to store a blog posts to DB
+Route::post('/blog', [BlogController::class, 'comment'])->name('blog.comment');
 
 
 // To about page

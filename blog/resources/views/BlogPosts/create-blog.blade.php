@@ -4,6 +4,12 @@
 @endsection
 
 @section('main-page')
+@if(session('status'))
+  <div class="alert alert-primary dark alert-dismissible fade show" role="alert"><i data-feather="thumbs-up"></i>
+    <p> {{session('status')}}</p>
+    <button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+  @endif
 <div class="col-sm-6">
                   <h3>Create Post</h3>
                   <ol class="breadcrumb">
@@ -20,7 +26,7 @@
                   <div class="card-header pb-0">
                     <h5> Create Post</h5>
                   </div>
-                  <form class="form theme-form" method="post" action="{{route('blog.store')}}" encytype="multipart/form-data">
+                  <form class="form theme-form" method="post" action="{{route('blog.store')}}" enctype="multipart/form-data">
                     @csrf
                     
                     <div class="card-body">
@@ -28,7 +34,7 @@
                         <div class="col">
                           <div class="mb-3">
                             <label class="form-label" for="exampleFormControlInput1">Title</label>
-                            <input class="form-control input-air-primary" id="exampleFormControlInput1" name="title" type="text" placeholder="input your title here....">
+                            <input class="form-control input-air-primary" id="exampleFormControlInput1" name="title" type="text" value="{{old('title')}}"  placeholder="input your title here....">
                           </div>
                           @error('title')
                           <p style="color: red; margin-bottom:25px ">{{$message}}</p>
@@ -53,7 +59,7 @@
                         <div class="col">
                           <div>
                             <label class="form-label" for="exampleFormControlTextarea4"> Body </label>
-                            <textarea class="form-control input-air-primary" name="body" id="exampleFormControlTextarea4" rows="6"></textarea>
+                            <textarea class="form-control input-air-primary" name="body" id="exampleFormControlTextarea4" rows="6">{{old('body')}}</textarea>
                           </div>
                           @error('body')
                           <p style="color: red; margin-bottom:25px ">{{$message}}</p>

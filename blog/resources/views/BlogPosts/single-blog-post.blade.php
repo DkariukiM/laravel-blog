@@ -11,18 +11,18 @@
                             <div class="details clearfix">
                                 <a href="#" class="category-badge">Finance</a>
                                 <h2 class="post-title">
-                                    <a href="#">3 Things to avoid while investing in stock market as a beginner</a>
+                                    <a href="#">{{$post->title}}</a>
                                 </h2>
                                 <ul class="meta list-inline mb-0">
                                     <li class="list-inline-item">
-                                        <a href="#">Techie Coder</a>
+                                        <a href="#">{{$post->user->name}}</a>
                                     </li>
-                                    <li class="list-inline-item">30 May 2021</li>
+                                    <li class="list-inline-item">{{$post->created_at->diffForHumans()}}</li>
                                 </ul>
                             </div>
                             <a href="#">
                                 <div class="thumb rounded">
-                                    <div class="inner data-bg-image" data-bg-image="{{ asset('images/posts/featured-lg.jpg') }}">
+                                    <div class="inner data-bg-image" data-bg-image="{{asset ($post->image) }}">
                                     </div>
                                 </div>
                             </a>
@@ -229,17 +229,7 @@
                     <div class="col-lg-8">
                         <div class="section-header">
                             <!-- <h3 class="section-title">Editor's Pick</h3> -->
-                            <p class="excerpt mb-0">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquet enim tortor at auctor urna nunc id cursus metus. Lectus arcu bibendum at varius vel pharetra vel turpis nunc. Quam quisque id diam vel quam elementum. Enim neque volutpat ac tincidunt vitae semper quis lectus nulla. Rutrum tellus pellentesque eu tincidunt tortor. Non diam phasellus vestibulum lorem sed risus. Ut pharetra sit amet aliquam. Faucibus in ornare quam viverra orci sagittis eu volutpat odio. Nibh tellus molestie nunc non blandit. Elit scelerisque mauris pellentesque pulvinar pellentesque habitant. Volutpat consequat mauris nunc congue nisi vitae. Viverra ipsum nunc aliquet bibendum enim facilisis gravida neque. Est lorem ipsum dolor sit amet. Et malesuada fames ac turpis egestas integer. Erat nam at lectus urna duis convallis convallis tellus. Pellentesque diam volutpat commodo sed egestas egestas. Ultricies integer quis auctor elit. Ac felis donec et odio pellentesque diam.
-
-                            Volutpat lacus laoreet non curabitur gravida arcu. Arcu vitae elementum curabitur vitae nunc sed velit dignissim sodales. Lectus nulla at volutpat diam ut venenatis. Vivamus arcu felis bibendum ut tristique et. Purus semper eget duis at tellus at urna. Est lorem ipsum dolor sit amet. Posuere urna nec tincidunt praesent semper. Ut porttitor leo a diam sollicitudin tempor id eu nisl. Nulla facilisi morbi tempus iaculis urna id volutpat lacus laoreet. Nisl vel pretium lectus quam id leo in. Arcu cursus euismod quis viverra nibh cras pulvinar mattis. Id semper risus in hendrerit gravida rutrum quisque non tellus. Donec massa sapien faucibus et molestie ac feugiat sed lectus.
-
-                            Accumsan tortor posuere ac ut consequat semper. Vivamus arcu felis bibendum ut tristique et egestas. Tristique sollicitudin nibh sit amet commodo. Est pellentesque elit ullamcorper dignissim cras tincidunt lobortis. Facilisi nullam vehicula ipsum a. Vestibulum morbi blandit cursus risus at ultrices mi tempus imperdiet. Elit sed vulputate mi sit. Ultrices vitae auctor eu augue ut lectus arcu. Dui id ornare arcu odio. Vulputate sapien nec sagittis aliquam. Cursus turpis massa tincidunt dui. Mattis aliquam faucibus purus in massa tempor nec feugiat. Praesent elementum facilisis leo vel.
-
-                            Nulla posuere sollicitudin aliquam ultrices sagittis orci a scelerisque purus. Porta nibh venenatis cras sed felis eget velit aliquet. Ipsum faucibus vitae aliquet nec. Netus et malesuada fames ac turpis egestas maecenas pharetra convallis. Ipsum nunc aliquet bibendum enim facilisis gravida neque convallis a. Et malesuada fames ac turpis egestas. Tortor posuere ac ut consequat semper viverra nam libero. Lorem ipsum dolor sit amet. Vel pharetra vel turpis nunc eget lorem dolor sed viverra. Dignissim cras tincidunt lobortis feugiat. Montes nascetur ridiculus mus mauris vitae ultricies leo integer malesuada. Blandit aliquam etiam erat velit scelerisque. Sed odio morbi quis commodo odio aenean. Et malesuada fames ac turpis. Nec ullamcorper sit amet risus nullam eget felis eget.
-
-                            Ipsum dolor sit amet consectetur adipiscing elit. Porttitor leo a diam sollicitudin. Arcu dictum varius duis at consectetur lorem donec massa. Purus in mollis nunc sed id semper. Aliquam malesuada bibendum arcu vitae elementum curabitur. Malesuada bibendum arcu vitae elementum. Felis donec et odio pellentesque diam volutpat commodo sed egestas. Vitae elementum curabitur vitae nunc. Consequat nisl vel pretium lectus quam id leo in vitae. Sed sed risus pretium quam vulputate dignissim. A cras semper auctor neque. Enim facilisis gravida neque convallis. Adipiscing bibendum est ultricies integer quis auctor.
-
+                            <p class="excerpt mb-0"> {{$post->title}}
                             </p>
                         </div>
 
@@ -289,25 +279,28 @@
                             <div class="row gy-5">
                                     <!-- comment form-->
                                     <div class="widget-content">
-                                    <form action="#">
+                                    <form action="{{route('blog.comment')}}" method="POST">
+                                    @csrf
                                         <div class="mb-2">
-                                            <input type="email" class="form-control w-100 "
-                                                placeholder="Name...">
+                                            <input type="text" class="form-control w-100 " name="name" value="{{old('name')}}" placeholder="Name...">
+                                            @error('name')
+                                                <p style="color: red; margin-bottom:25px ">{{$message}}</p>
+                                            @enderror
                                         </div>
 
                                         <div class="mb-2">
-                                            <input type="email" class="form-control w-100 "
-                                                placeholder="Email address...">
+                                            <input type="email" class="form-control w-100 "name="email" value="{{old('email')}}" placeholder="Email address...">
+                                            @error('email')
+                                                <p style="color: red; margin-bottom:25px ">{{$message}}</p>
+                                            @enderror
                                         </div>
 
                                         <div class="mb-2">
-                                            <textarea class="form-control w-100 text-center"
-                                                > </textarea>
+                                            <textarea class="form-control w-100 text-center" name="body">{{old('body')}}</textarea>
+                                            @error('body')
+                                                <p style="color: red; margin-bottom:25px ">{{$message}}</p>
+                                            @enderror
                                         </div>
-
-                        
-
-
                                         <button class="btn btn-default btn-full" type="submit"> Comment</button>
 
                                     </form>

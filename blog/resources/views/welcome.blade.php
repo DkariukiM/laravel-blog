@@ -588,6 +588,9 @@
 
                         <div class="padding-30 rounded bordered">
                             <div class="row">
+
+                            @foreach($posts as $post )
+                            <!-- post section -->
                                 <div class="col-md-12 col-sm-6">
                                     <!-- post  -->
                                     <div class="post post-list clearfix">
@@ -597,7 +600,7 @@
                                             </span>
                                             <a href="#">
                                                 <div class="inner">
-                                                    <img src="{{asset ('images/posts/latest-1.jpg') }}" alt="">
+                                                    <img src="{{asset ($post->image) }}" alt="">
                                                 </div>
                                             </a>
                                         </div>
@@ -606,17 +609,17 @@
                                                 <li class="list-inline-item">
                                                     <a href="#">
                                                         <img src="{{asset ('images/other/author-sm.jpg') }}" class="author" alt="">
-                                                        Techie Coder
+                                                        {{$post->user->name}}
                                                     </a>
                                                 </li>
                                                 <li class="list-inline-item">
                                                     <a href="#">Trending</a>
                                                 </li>
-                                                <li class="list-inline-item">26 May 2021</li>
+                                                <li class="list-inline-item">{{$post->created_at->diffForHumans()}}</li>
                                             </ul>
                                             <h5 class="post-tile">
-                                                <a href="#">
-                                                    360-seater plane flies to Dubai from Mumbai with only 1 Passenger
+                                                <a href="{{route('blog.show', $post)}}">
+                                                    {{$post->title}}
                                                 </a>
                                             </h5>
                                             <p class="excerpt mb-0">
@@ -654,198 +657,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-12 col-sm-6">
-                                    <!-- post  -->
-                                    <div class="post post-list clearfix">
-                                        <div class="thumb rounded">
-                                            <a href="#">
-                                                <div class="inner">
-                                                    <img src="{{asset ('images/posts/latest-2.jpg') }}" alt="">
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="details">
-                                            <ul class="meta list-inline mb-3">
-                                                <li class="list-inline-item">
-                                                    <a href="#">
-                                                        <img src="{{asset ('images/other/author-sm.jpg') }}" class="author" alt="">
-                                                        Techie Coder
-                                                    </a>
-                                                </li>
-                                                <li class="list-inline-item">
-                                                    <a href="#">Technology</a>
-                                                </li>
-                                                <li class="list-inline-item">26 May 2021</li>
-                                            </ul>
-                                            <h5 class="post-tile">
-                                                <a href="#">
-                                                    MS-teams to enhancce user experience with dev updates
-                                                </a>
-                                            </h5>
-                                            <p class="excerpt mb-0">
-                                                This is Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi,
-                                                iure.
-                                            </p>
-                                            <div class="post-bottom clearfix d-flex align-items-center">
-                                                <div class="social-share me-auto">
-                                                    <button class="toggle-button icon-share"></button>
-                                                    <ul class="icons list-unstyled list-inline mb-0">
-                                                        <li class="list-inline-item">
-                                                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                                        </li>
-                                                        <li class="list-inline-item">
-                                                            <a href="#"><i class="fab fa-twitter"></i></a>
-                                                        </li>
-                                                        <li class="list-inline-item">
-                                                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                                        </li>
-                                                        <li class="list-inline-item">
-                                                            <a href="#"><i class="fab fa-pinterest"></i></a>
-                                                        </li>
-                                                        <li class="list-inline-item">
-                                                            <a href="#"><i class="fab fa-telegram-plane"></i></a>
-                                                        </li>
-                                                        <li class="list-inline-item">
-                                                            <a href="#"><i class="far fa-envelope"></i></a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div class="more-button float-end">
-                                                    <a href="#"><span class="icon-options"></span></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-12 col-sm-6">
-                                    <!-- post  -->
-                                    <div class="post post-list clearfix">
-                                        <div class="thumb rounded">
-                                            <span class="post-format-sm">
-                                                <i class="icon-camrecorder"></i>
-                                            </span>
-                                            <a href="#">
-                                                <div class="inner">
-                                                    <img src="{{asset ('images/posts/latest-3.jpg') }}" alt="">
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="details">
-                                            <ul class="meta list-inline mb-3">
-                                                <li class="list-inline-item">
-                                                    <a href="#">
-                                                        <img src="{{asset ('images/other/author-sm.jpg') }}" class="author" alt="">
-                                                        Techie Coder
-                                                    </a>
-                                                </li>
-                                                <li class="list-inline-item">
-                                                    <a href="#">Technology</a>
-                                                </li>
-                                                <li class="list-inline-item">26 May 2021</li>
-                                            </ul>
-                                            <h5 class="post-tile">
-                                                <a href="#">
-                                                    India responds to whatsapp, says no intention to violate ROP.
-                                                </a>
-                                            </h5>
-                                            <p class="excerpt mb-0">
-                                                This is Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi,
-                                                iure.
-                                            </p>
-                                            <div class="post-bottom clearfix d-flex align-items-center">
-                                                <div class="social-share me-auto">
-                                                    <button class="toggle-button icon-share"></button>
-                                                    <ul class="icons list-unstyled list-inline mb-0">
-                                                        <li class="list-inline-item">
-                                                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                                        </li>
-                                                        <li class="list-inline-item">
-                                                            <a href="#"><i class="fab fa-twitter"></i></a>
-                                                        </li>
-                                                        <li class="list-inline-item">
-                                                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                                        </li>
-                                                        <li class="list-inline-item">
-                                                            <a href="#"><i class="fab fa-pinterest"></i></a>
-                                                        </li>
-                                                        <li class="list-inline-item">
-                                                            <a href="#"><i class="fab fa-telegram-plane"></i></a>
-                                                        </li>
-                                                        <li class="list-inline-item">
-                                                            <a href="#"><i class="far fa-envelope"></i></a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div class="more-button float-end">
-                                                    <a href="#"><span class="icon-options"></span></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-12 col-sm-6">
-                                    <!-- post  -->
-                                    <div class="post post-list clearfix">
-                                        <div class="thumb rounded">
-                                            <a href="#">
-                                                <div class="inner">
-                                                    <img src="{{asset ('images/posts/latest-4.jpg') }}" alt="">
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="details">
-                                            <ul class="meta list-inline mb-3">
-                                                <li class="list-inline-item">
-                                                    <a href="#">
-                                                        <img src="{{asset ('images/other/author-sm.jpg') }}" class="author" alt="">
-                                                        Techie Coder
-                                                    </a>
-                                                </li>
-                                                <li class="list-inline-item">
-                                                    <a href="#">Finance</a>
-                                                </li>
-                                                <li class="list-inline-item">26 May 2021</li>
-                                            </ul>
-                                            <h5 class="post-tile">
-                                                <a href="#">
-                                                    Sensex closes 380pts higher, Nifty at 15,302; metal, power drag
-                                                </a>
-                                            </h5>
-                                            <p class="excerpt mb-0">
-                                                This is Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi,
-                                                iure.
-                                            </p>
-                                            <div class="post-bottom clearfix d-flex align-items-center">
-                                                <div class="social-share me-auto">
-                                                    <button class="toggle-button icon-share"></button>
-                                                    <ul class="icons list-unstyled list-inline mb-0">
-                                                        <li class="list-inline-item">
-                                                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                                        </li>
-                                                        <li class="list-inline-item">
-                                                            <a href="#"><i class="fab fa-twitter"></i></a>
-                                                        </li>
-                                                        <li class="list-inline-item">
-                                                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                                        </li>
-                                                        <li class="list-inline-item">
-                                                            <a href="#"><i class="fab fa-pinterest"></i></a>
-                                                        </li>
-                                                        <li class="list-inline-item">
-                                                            <a href="#"><i class="fab fa-telegram-plane"></i></a>
-                                                        </li>
-                                                        <li class="list-inline-item">
-                                                            <a href="#"><i class="far fa-envelope"></i></a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div class="more-button float-end">
-                                                    <a href="#"><span class="icon-options"></span></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                            @endforeach
+
 
                                 <div class="text-center">
                                     <button class="btn btn-simple">Load More</button>

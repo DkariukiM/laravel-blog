@@ -1,6 +1,7 @@
 @extends('dashboard-layout')
 
 @section('main-page')
+
  <!-- Container-fluid starts-->
  <div class="container-fluid dashboard-default-sec">
             <div class="row">
@@ -10,7 +11,7 @@
                     <div class="card">
                       <div class="card-body">
                         <div class="table-responsive">
-                          <h5>Recent Orders</h5>
+                          <h5> Posts </h5>
                           <table class="table table-bordernone">                                         
                             <thead>
                               <tr>                                        
