@@ -390,6 +390,8 @@
                                         </div>
                                     </div>
                                 </div>
+
+                                
                                 <div class="col-md-12 col-sm-6">
                                     <!-- post  -->
                                     <div class="post post-list clearfix">
